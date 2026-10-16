@@ -38,6 +38,8 @@ pnpm render title           # one export
 pnpm render film --grid     # a frame grid PNG instead of a video
 ```
 
+Inside the framefields monorepo (`apps/renderer-service/examples/smoke-project`), add `--ignore-workspace` to the pnpm commands so the project installs on its own.
+
 On an Apple Silicon Mac, `film` renders in about 18 s, `threeD` in 2 s, and `vision` in about 24 s (three vision models per frame, on the GPU).
 
 The project uses pnpm (`packageManager` in `package.json`), and the worker installs it with the same version. pnpm only runs the install scripts listed in `pnpm.onlyBuiltDependencies`, and framefields' native dependencies need theirs: skia-canvas, node-av (FFmpeg), webgpu and onnxruntime-node download or set up binaries, and esbuild checks its binary. `protobufjs` is listed under `ignoredBuiltDependencies`: its script only prints a version check.
