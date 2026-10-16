@@ -10,7 +10,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"framefields": "^2.2.0-beta.0"
+		"framefields": "file:vendor/framefields-2.2.0-beta.0.vision.1.tgz"
 	},
 	"devDependencies": {
 		"@types/node": "^24.0.0",
@@ -26,6 +26,7 @@
 		"onnxruntime-node@1.30.0": true,
 		"skia-canvas@3.0.8": true,
 		"webgpu@0.4.0": true,
-		"fsevents": false
+		"fsevents": false,
+		"protobufjs": false
 	}
 }
