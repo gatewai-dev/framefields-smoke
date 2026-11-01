@@ -12,10 +12,11 @@ A test project for the framefields renderer worker. It exercises most of framefi
 | `threeD` | 4 s | Studio environment (physically based shading, shadows, bloom), orbiting camera, chrome / satin / emissive primitives, extruded 3D text, glTF model |
 | `vision` | 2 s | ONNX models on video: subject cutout with text behind it (segmentation), pose skeleton, tracked boxes |
 | `all` | 3 files | `film`, `threeD` and `vision` from one job |
+| `split` | 2 min | The 2D scenes ten times over, with particles and a trail that depend on every earlier frame. For split renders across workers (`workers: 2`): chunks that start mid-film must rebuild that state, so compare the frames around each seam with a one-worker render. |
 
 `film` includes `title`, `media`, `effects` and `charts`. Render a single scene when you need to isolate a failure.
 
-Everything comes from `framefields` 2.2. The models for `vision` download on first use (about 80 MB) into `$FRAMEFIELDS_MODELS_DIR`, which the worker keeps on its cache volume. They run on the GPU through WebGPU (`onnxruntime-web`), and on the CPU when the adapter is a software one.
+Everything comes from `framefields` 2.10 (the `2.10.0-canary.0` canary, for split renders). The models for `vision` download on first use (about 80 MB) into `$FRAMEFIELDS_MODELS_DIR`, which the worker keeps on its cache volume. They run on the GPU through WebGPU (`onnxruntime-web`), and on the CPU when the adapter is a software one.
 
 ## Media files
 

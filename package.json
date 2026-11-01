@@ -10,7 +10,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"framefields": "^2.2.0"
+		"framefields": "2.10.0-canary.0"
 	},
 	"devDependencies": {
 		"@types/node": "^24.0.0",

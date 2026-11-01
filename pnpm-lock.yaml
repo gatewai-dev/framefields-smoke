@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       framefields:
-        specifier: ^2.2.0
-        version: 2.2.0(@types/node@24.19.2)
+        specifier: 2.10.0-canary.0
+        version: 2.10.0-canary.0(@types/node@24.19.2)
     devDependencies:
       '@types/node':
         specifier: ^24.0.0
@@ -23,6 +23,12 @@ importers:
         version: 5.9.3
 
 packages:
+
+  '@dimforge/rapier2d-deterministic-compat@0.21.0':
+    resolution: {integrity: sha512-qVwHqqpRX73ktQRqiAa/0JdBfWdzsGHg8r8d+snaZB0WRXaTs3m7GU6jN+Qf3gEjMEUqk3Rc9q87yGXHkktTbA==}
+
+  '@dimforge/rapier3d-deterministic-compat@0.21.0':
+    resolution: {integrity: sha512-n7JuU62Obljlgq+OeH2DHhTmRSjRzwuJPl54tS9pFIzVQyvXsO5CH+a5KkIRBtnFWDbg1Zicv9BulG0jfBAopA==}
 
   '@emnapi/runtime@1.11.3':
     resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
@@ -190,6 +196,9 @@ packages:
   '@fidm/x509@1.2.1':
     resolution: {integrity: sha512-nwc2iesjyc9hkuzcrMCBXQRn653XuAUKorfWM8PZyJawiy1QzLj4vahwzaI25+pfpwOLvMzbJ0uKpWLDNmo16w==}
     engines: {node: '>= 8'}
+
+  '@huggingface/tokenizers@0.2.0':
+    resolution: {integrity: sha512-LidMHe1FpcSYH4vcSjXooda34pC0M8m1gmDOv7SQi6Iv+ib1zX7J3sHBCC9/3FPCkn2k1b55FneVqMRxrr99pg==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -833,8 +842,9 @@ packages:
   fontkit@2.0.4:
     resolution: {integrity: sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==}
 
-  framefields@2.2.0:
-    resolution: {integrity: sha512-MHOgfSe7KLglxvXvSrq0n94NguFREgQ1yKF9N5m2A3EPqpSJZ81T6SLI/2lfqB7WyDnch5i1Nsxux2avjXfh+g==}
+  framefields@2.10.0-canary.0:
+    resolution: {integrity: sha512-4apI9TwB+dsf+1L9sNls0Z+1mpm3Z5nR+L6zLxEQCCEQH4xGinx5cB2H7H8IN+Xvd9wim5fdihg9c+JHROOOuw==}
+    hasBin: true
 
   fs-extra@11.3.1:
     resolution: {integrity: sha512-eXvGGwZ5CL17ZSwHWd3bbgk7UUpF6IFHtP57NYYakPvHOs8GDgDe5KJI36jIJzDkJ6eJjuzRA8eBQb6SkKue0g==}
@@ -1149,6 +1159,12 @@ packages:
 
 snapshots:
 
+  '@dimforge/rapier2d-deterministic-compat@0.21.0':
+    optional: true
+
+  '@dimforge/rapier3d-deterministic-compat@0.21.0':
+    optional: true
+
   '@emnapi/runtime@1.11.3':
     dependencies:
       tslib: 2.8.1
@@ -1240,6 +1256,8 @@ snapshots:
       '@fidm/asn1': 1.0.4
       tweetnacl: 1.0.3
     optional: true
+
+  '@huggingface/tokenizers@0.2.0': {}
 
   '@img/colour@1.1.0': {}
 
@@ -1819,8 +1837,9 @@ snapshots:
       unicode-properties: 1.4.1
       unicode-trie: 2.0.0
 
-  framefields@2.2.0(@types/node@24.19.2):
+  framefields@2.10.0-canary.0(@types/node@24.19.2):
     dependencies:
+      '@huggingface/tokenizers': 0.2.0
       '@lottiefiles/dotlottie-web': 0.74.0
       '@mediabunny/mp3-encoder': 1.61.6(mediabunny@1.61.6)
       '@mediabunny/server': 1.61.6(mediabunny@1.61.6)
@@ -1845,6 +1864,8 @@ snapshots:
       yoga-layout: 3.2.1
       zod: 4.6.7
     optionalDependencies:
+      '@dimforge/rapier2d-deterministic-compat': 0.21.0
+      '@dimforge/rapier3d-deterministic-compat': 0.21.0
       onnxruntime-web: 1.30.0
     transitivePeerDependencies:
       - '@napi-rs/canvas'

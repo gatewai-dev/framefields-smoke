@@ -1,6 +1,6 @@
 import {
 	Blur,
-	type Effect,
+	type AnyVisualEffect,
 	Flip,
 	GradientMap,
 	HalftoneScreen,
@@ -24,7 +24,7 @@ const CELL_W = (W - GAP * (COLS + 1)) / COLS;
 const CELL_H = (H - 120 - GAP * (ROWS + 1)) / ROWS;
 
 /** One image per cell, each through a different effect (one of them animated). */
-const CELLS: Array<[name: string, effect: Effect<object>]> = [
+const CELLS: Array<[name: string, effect: AnyVisualEffect]> = [
 	[
 		"Blur (animated)",
 		new Blur({
