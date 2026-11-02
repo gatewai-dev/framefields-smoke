@@ -1,0 +1,33 @@
+{
+	"renders": {
+		"film": {
+			"title": "Smoke film",
+			"description": "Every scene once: text, shapes, media, Lottie, SVG, charts, captions, score and film grain.",
+			"entry": "src/film.ts",
+			"export": "film",
+			"output": "output/film.mp4"
+		},
+		"split": {
+			"title": "Two-minute split test",
+			"description": "The scenes ten times with particles and a trail, for checking seams between split chunks.",
+			"entry": "src/film.ts",
+			"export": "split",
+			"workers": "auto",
+			"output": "output/split.mp4"
+		},
+		"three-d": {
+			"title": "3D",
+			"description": "The 3D pipeline on its own.",
+			"entry": "src/film.ts",
+			"export": "threeD",
+			"output": "output/three-d.mp4"
+		},
+		"vision": {
+			"title": "Vision",
+			"description": "ONNX detection, segmentation and pose on the clip.",
+			"entry": "src/film.ts",
+			"export": "vision",
+			"output": "output/vision.mp4"
+		}
+	}
+}
